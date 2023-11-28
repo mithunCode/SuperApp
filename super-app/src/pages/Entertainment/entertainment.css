@@ -1,1 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.select-main {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+  height: 100%;
+  width: 100%;
+}
 
+.left {
+  width: 40%;
+  padding: 0px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+}
+.choose {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 139.688%; /* 94.988px */
+}
+.right {
+  width: 50%;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.genre-sel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-basis: 70%;
+  gap: 25px;
+}
+.next-page {
+  color: #fff;
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 92.2%; /* 24.235px */
+  letter-spacing: 0.526px;
+  width: 150px;
+  height: 45px;
+  border-radius: 38.857px;
+  background-color: #148a08;
+  border: none;
+  flex-shrink: 0;
+  margin-right: 80px;
+  cursor: pointer;
+}
+.selected {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.selected-genre-btn {
+  color: #fff;
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 92.2%; /* 24.235px */
+  letter-spacing: 0.526px;
+  width: 100px;
+  height: 45px;
+  border-radius: 38.857px;
+  background-color: #148a08;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.deselect {
+  color: #085c00;
+  font-family: Roboto;
+  font-size: 15 px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 105.688%; /* 27.831px */
+  letter-spacing: 0.527px;
+  cursor: pointer;
+}
+.minError {
+  color: #f00;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 105.688%; /* 26.57px */
+  letter-spacing: 0.503px;
+}
+.s {
+  padding: 1px;
+}
+.green-border {
+  border: 2px solid green;
+}
