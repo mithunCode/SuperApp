@@ -1,37 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "./homepage.css";
 import dp from "../../assets/dp.png";
+import WeatherCard from "../../components/WeatherCard";
+import NewsCard from "../../components/NewsCard";
 const Homepage = () => {
   const [user, setUser] = useState("");
   const [genre, setGenre] = useState([]);
-  let [time, setTime] = useState(
-    new Date().toLocaleTimeString("en-US", {
-      hour12: true,
-      hour: "numeric",
-      minute: "numeric",
-    })
-  );
+
   useEffect(() => {
     setUser(JSON.parse(localStorage.getItem("userData")));
     setGenre(JSON.parse(localStorage.getItem("selectedGenre")));
   }, []);
-  var currentdate = new Date();
-  var date =
-    currentdate.getMonth() +
-    1 +
-    "-" +
-    currentdate.getDate() +
-    "-" +
-    currentdate.getFullYear();
-
-  setInterval(() => {
-    var curTime = new Date().toLocaleTimeString("en-US", {
-      hour12: true,
-      hour: "numeric",
-      minute: "numeric",
-    });
-    setTime(curTime);
-  }, 1000);
 
   return (
     <div className="homepage">
@@ -54,13 +33,12 @@ const Homepage = () => {
           </div>
         </div>
         <div className="weather">
-          <div className="date-container">
-            <p>{date}</p>
-            <p>{time}</p>
-          </div>
+          <WeatherCard />
         </div>
       </div>
-      <div className="right-home"></div>
+      {/* <div className="right-home">
+        <NewsCard />
+      </div> */}
     </div>
   );
 };

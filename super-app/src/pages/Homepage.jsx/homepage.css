@@ -2,7 +2,11 @@ body {
   background-color: black;
 }
 .homepage {
-  margin: 30px;
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 .left-home {
   display: flex;
@@ -62,19 +66,4 @@ body {
   height: 200px;
   border-radius: 33.428px;
   background: #101744;
-}
-.date-container {
-  border-radius: 33.428px 33.428px 0px 0px;
-  background-color: #ff4ade;
-  width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: #fff;
-  font-family: Roboto;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
 }
