@@ -1,4 +1,4 @@
-import Entertainment from "./pages/Entertainment/Entertainment.jsx";
+import Selection from "./pages/SelectGenre/Selection.jsx";
 import Homepage from "./pages/Homepage.jsx/Homepage.jsx";
 import Registration from "./pages/Registration/Registration.jsx";
 import { Route, Routes } from "react-router-dom";
@@ -7,7 +7,7 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<Registration />} />
-        <Route path="/select" element={<Entertainment />} />
+        <Route path="/select" element={<Selection />} />
         <Route path="/home" element={<Homepage />} />
       </Routes>
     </>

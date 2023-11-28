@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SelectGenre from "../../components/SelectGenre";
-import "./entertainment.css";
+import "./selection.css";
 import { useNavigate } from "react-router-dom";
 import err from "../../assets/err.png";
 
-const Entertainment = () => {
+const Selection = () => {
   const navigate = useNavigate();
 
   const genres = [
@@ -93,4 +93,4 @@ const Entertainment = () => {
   );
 };
 
-export default Entertainment;
+export default Selection;
