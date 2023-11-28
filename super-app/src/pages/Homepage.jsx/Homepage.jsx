@@ -36,9 +36,9 @@ const Homepage = () => {
           <WeatherCard />
         </div>
       </div>
-      {/* <div className="right-home">
+      <div className="right-home">
         <NewsCard />
-      </div> */}
+      </div>
     </div>
   );
 };
