@@ -25,14 +25,14 @@ const WeatherCard = () => {
       <DateCard />
       <div className="weather-container">
         <div className="rain">
-          <img src={curWeather?.condition?.icon || rain} alt="" width={70} />
+          <img src={curWeather?.condition?.icon || rain} alt="" width={40} />
           <p>{curWeather?.condition?.text}</p>
         </div>
         <div className="sep-line"></div>
         <div className="temp">
           <p>{curWeather?.temp_c} &deg;C</p>
           <div className="pressure">
-            <img src={temp} height={30} alt="temp" />
+            <img src={temp} height={20} alt="temp" />
             <p>
               {curWeather?.pressure_mb} mbar <br /> pressure
             </p>
@@ -41,14 +41,14 @@ const WeatherCard = () => {
         <div className="sep-line"></div>
         <div className="wind">
           <div className="wind-div">
-            <img src={wind} width={25} alt="wind" />
+            <img src={wind} width={20} alt="wind" />
             <p>
               {curWeather?.wind_kph}
               km/h <br /> wind
             </p>
           </div>
           <div className="wind-div">
-            <img src={humid} width={25} alt="humid" />
+            <img src={humid} width={20} alt="humid" />
             <p>
               {curWeather?.humidity}% <br /> humidity
             </p>

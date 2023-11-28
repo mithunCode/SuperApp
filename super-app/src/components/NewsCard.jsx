@@ -25,7 +25,7 @@ const NewsCard = () => {
         className="news-bg"
         style={{ backgroundImage: `url(${news.urlToImage})` }}
       >
-        <img src={news.urlToImage} width={300} alt="" className="news-img" />
+        <img src={news.urlToImage} width={350} alt="" className="news-img" />
         <div className="title-bg-news">
           {news.title}
           <p>

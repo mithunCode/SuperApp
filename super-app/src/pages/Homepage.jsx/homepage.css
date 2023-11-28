@@ -2,9 +2,9 @@ body {
   background-color: black;
 }
 .homepage {
-  margin: 50px;
+  margin: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: 20px;
 }
@@ -13,26 +13,64 @@ body {
   flex-direction: column;
   gap: 20px;
 }
+.left-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.left-top {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.notes {
+  width: 350px;
+  height: 350px;
+  flex-shrink: 0;
+  border-radius: 19px;
+  background: #f1c75b;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  color: #000;
+  font-family: Roboto;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 105.688%; /* 40.161px */
+  letter-spacing: 0.76px;
+}
+.timer {
+  width: 800px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 19px;
+  background: #1e2343;
+}
 .profile-card {
-  width: 700px;
-  height: 300px;
+  width: 430px;
+  height: 200px;
   flex-shrink: 0;
   border-radius: 30px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 10px;
   align-items: center;
   background: #5746ea;
 }
 .user-info {
-  width: 60%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  gap: 25px;
+  gap: 15px;
   color: #fff;
   font-family: Roboto;
-  font-size: 15px;
+  font-size: 10px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%; /* 38.124px */
@@ -40,10 +78,10 @@ body {
   padding: 20px;
 }
 .uname {
-  font-size: 40px;
+  font-size: 30px;
 }
 .genre-show {
-  margin-top: 40px;
+  margin-top: 30px;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
@@ -51,19 +89,35 @@ body {
   align-items: center;
 }
 .selectedG {
-  border-radius: 36.947px;
+  border-radius: 30px;
   background: #9f94ff;
-  width: 150px;
-
-  height: 40px;
+  width: 60px;
+  height: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
 }
 .weather {
-  width: 700px;
-  height: 200px;
+  width: 430px;
+  height: 150px;
   border-radius: 33.428px;
   background: #101744;
+}
+
+.notepad {
+  width: 100%;
+  height: 100%;
+  background-color: #f1c75b;
+  border: none;
+  outline: none;
+}
+textarea::-webkit-scrollbar {
+  width: 1em;
+  color: black;
+}
+textarea::-webkit-scrollbar-thumb {
+  background-color: hsl(43, 100%, 75%); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 1px solid #f1c75b; /* creates padding around scroll thumb */
 }
