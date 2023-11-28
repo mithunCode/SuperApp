@@ -26,7 +26,10 @@ const Entertainment = () => {
   };
 
   const handleNextPage = () => {
-    checkMinimumSelection() && navigate("/home");
+    if (checkMinimumSelection() === true) {
+      localStorage.setItem("selectedGenre", JSON.stringify(selectedGenre));
+      navigate("/home");
+    }
   };
 
   const checkMinimumSelection = () => {
