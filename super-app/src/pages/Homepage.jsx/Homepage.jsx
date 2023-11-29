@@ -3,11 +3,13 @@ import "./homepage.css";
 import dp from "../../assets/dp.png";
 import WeatherCard from "../../components/WeatherCard";
 import NewsCard from "../../components/NewsCard";
+import Timer from "../../components/Timer";
+import { useNavigate } from "react-router-dom";
 const Homepage = () => {
   const [user, setUser] = useState("");
   const [genre, setGenre] = useState([]);
   const [notes, setNotes] = useState("");
-
+  const navigate = useNavigate();
   useEffect(() => {
     setUser(JSON.parse(localStorage.getItem("userData")));
     setGenre(JSON.parse(localStorage.getItem("selectedGenre")));
@@ -20,6 +22,9 @@ const Homepage = () => {
     setNotes(e.target.value);
   };
 
+  const handleBrowse = () => {
+    navigate("/entertainment");
+  };
   return (
     <div className="homepage">
       <div className="left-home">
@@ -42,9 +47,7 @@ const Homepage = () => {
                 </div>
               </div>
             </div>
-            <div className="weather">
-              <WeatherCard />
-            </div>
+            <div className="weather">{/* <WeatherCard /> */}</div>
           </div>
 
           <div className="notes">
@@ -58,10 +61,19 @@ const Homepage = () => {
             </textarea>
           </div>
         </div>
-        <div className="timer">Notes</div>
+        <div className="timer">
+          <Timer />
+        </div>
       </div>
       <div className="right-home">
         <NewsCard />
+        <button
+          className="browse-btn"
+          onClick={handleBrowse}
+          style={{ cursor: "pointer" }}
+        >
+          Browse
+        </button>
       </div>
     </div>
   );

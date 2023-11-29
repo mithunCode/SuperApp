@@ -13,6 +13,14 @@ body {
   flex-direction: column;
   gap: 20px;
 }
+.right-home {
+  display: flex;
+  flex-direction: column;
+  margin-top: -30px;
+  justify-content: "";
+  align-items: flex-end;
+  gap: 10px;
+}
 .left-2 {
   display: flex;
   flex-direction: column;
@@ -26,7 +34,7 @@ body {
 
 .notes {
   width: 350px;
-  height: 350px;
+  height: 320px;
   flex-shrink: 0;
   border-radius: 19px;
   background: #f1c75b;
@@ -45,15 +53,26 @@ body {
   letter-spacing: 0.76px;
 }
 .timer {
+  padding: 10px;
   width: 800px;
   height: 200px;
   flex-shrink: 0;
   border-radius: 19px;
-  background: #1e2343;
+  background-color: #1e2343;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 105.688%; /* 42.275px */
+  letter-spacing: 1.6px;
 }
 .profile-card {
   width: 430px;
-  height: 200px;
+  height: 170px;
   flex-shrink: 0;
   border-radius: 30px;
   display: flex;
@@ -120,4 +139,20 @@ textarea::-webkit-scrollbar-thumb {
   background-color: hsl(43, 100%, 75%); /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
   border: 1px solid #f1c75b; /* creates padding around scroll thumb */
+}
+.browse-btn {
+  color: #fff;
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 92.2%; /* 21.691px */
+  letter-spacing: 0.471px;
+  width: 150px;
+  height: 45px;
+  flex-shrink: 0;
+  border-radius: 34.777px;
+  background-color: #148a08;
+  border: none;
 }
