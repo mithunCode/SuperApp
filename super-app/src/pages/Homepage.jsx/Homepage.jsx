@@ -47,7 +47,9 @@ const Homepage = () => {
                 </div>
               </div>
             </div>
-            <div className="weather">{/* <WeatherCard /> */}</div>
+            <div className="weather">
+              <WeatherCard />
+            </div>
           </div>
 
           <div className="notes">

@@ -1,0 +1,37 @@
+.ent {
+  padding: 5px 30px;
+}
+.ent-header {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.ent-super {
+  font-size: 30px;
+}
+
+.ent-profile {
+  border-radius: 50%;
+}
+
+.ent-choice {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 139.688%; /* 42.499px */
+  letter-spacing: 0.608px;
+}
+.movie-container {
+  color: white;
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+}
+.movies {
+  display: flex;
+  gap: 20px;
+}
