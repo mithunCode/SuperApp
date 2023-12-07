@@ -68,7 +68,7 @@ const Homepage = () => {
         </div>
       </div>
       <div className="right-home">
-        {/* <NewsCard /> */}
+        <NewsCard />
         <button
           className="browse-btn"
           onClick={handleBrowse}
