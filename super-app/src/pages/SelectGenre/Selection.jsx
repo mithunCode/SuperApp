@@ -3,20 +3,40 @@ import SelectGenre from "../../components/SelectGenre";
 import "./selection.css";
 import { useNavigate } from "react-router-dom";
 import err from "../../assets/err.png";
+import action from "../../assets/action.png";
+import drama from "../../assets/drama.png";
+import romance from "../../assets/romance.png";
+import thriller from "../../assets/thriller.png";
+import fantasy from "../../assets/fantasy.png";
+import horror from "../../assets/horror.png";
+import music from "../../assets/music.png";
+import western from "../../assets/western.png";
+import fiction from "../../assets/fiction.png";
 
 const Selection = () => {
   const navigate = useNavigate();
+  const img = [
+    action,
+    drama,
+    romance,
+    thriller,
+    western,
+    horror,
+    fantasy,
+    music,
+    fiction,
+  ];
 
   const genres = [
-    ["action", "#FF5209"],
-    ["drama", "#FF5209"],
-    ["romance", "#148A08"],
-    ["thriller", "#84C2FF"],
-    ["western", "#902500"],
-    ["horror", "#7358FF"],
-    ["fantasy", "#7358FF"],
-    ["music", "#E61E32"],
-    ["fiction", "#6CD061"],
+    ["Action", "#FF5209"],
+    ["Drama", "#FF5209"],
+    ["Romance", "#148A08"],
+    ["Thriller", "#84C2FF"],
+    ["Western", "#902500"],
+    ["Horror", "#7358FF"],
+    ["Fantasy", "#7358FF"],
+    ["Music", "#E61E32"],
+    ["Fiction", "#6CD061"],
   ];
   const [selectedGenre, setSelectedGenre] = useState([]);
   const [minError, setMinError] = useState(false);
@@ -79,6 +99,7 @@ const Selection = () => {
                 handleClick={handleClick}
                 id={i}
                 className="s"
+                img={img[i]}
               />
             );
           })}

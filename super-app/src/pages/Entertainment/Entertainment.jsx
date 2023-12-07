@@ -1,35 +1,15 @@
 import React, { useEffect, useState } from "react";
 import dp from "../../assets/dp.png";
 import "./entertainment.css";
-import axios from "axios";
+import List from "../../components/List";
+import { useNavigate } from "react-router-dom";
+
 const Entertainment = () => {
-  const [ent, setEnt] = useState([]);
-  const [movies, setMovies] = useState([]);
-
-  const options = {
-    method: "GET",
-    url: "https://moviesdatabase.p.rapidapi.com/titles",
-    params: { genre: "Romance" },
-    headers: {
-      "X-RapidAPI-Key": "46993aa5e2mshf424e4034124846p139af6jsn063932f3b74a",
-      "X-RapidAPI-Host": "moviesdatabase.p.rapidapi.com",
-    },
+  const movies = JSON.parse(window.localStorage.getItem("selectedGenre"));
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/select");
   };
-
-  const getRecommendations = async () => {
-    try {
-      const response = await axios.request(options);
-      console.log(response.data);
-      setMovies(response.data.results);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  useEffect(() => {
-    setEnt(localStorage.getItem("selectedGenre"));
-    getRecommendations();
-  }, []);
 
   return (
     <>
@@ -47,20 +27,14 @@ const Entertainment = () => {
       </div>
       <div className="ent">
         <h3 className="ent-choice">Entertainment according to your choice</h3>
+        <button className="next-page" onClick={() => handleClick()}>
+          HomePage
+        </button>
       </div>
       <div className="movie-container">
-        {movies.map((film, i) => {
-          return film.primaryImage?.url ? (
-            <div className="movies" key={i}>
-              <img
-                src={film.primaryImage?.url}
-                width={200}
-                height={150}
-                alt=""
-              />
-            </div>
-          ) : null;
-        })}
+        {movies.map((movie, i) => (
+          <List key={i} genre={movie} />
+        ))}
       </div>
     </>
   );

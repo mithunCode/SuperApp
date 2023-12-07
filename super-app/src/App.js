@@ -3,6 +3,7 @@ import Homepage from "./pages/Homepage.jsx/Homepage.jsx";
 import Registration from "./pages/Registration/Registration.jsx";
 import { Route, Routes } from "react-router-dom";
 import Entertainment from "./pages/Entertainment/Entertainment.jsx";
+
 const App = () => {
   return (
     <>
@@ -10,7 +11,7 @@ const App = () => {
         <Route path="/" element={<Registration />} />
         <Route path="/select" element={<Selection />} />
         <Route path="/home" element={<Homepage />} />
-        {/* <Route path="/entertainment" element={<Entertainment />} /> */}
+        <Route path="/entertainment" element={<Entertainment />} />
       </Routes>
     </>
   );
